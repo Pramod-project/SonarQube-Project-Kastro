@@ -86,7 +86,7 @@ With this Jenkins and SonarQube setup is ready
 
 Step 6: Jenkins Pipeline Job for SonarQube Analysis
 
-Jenkins Dashboard ---> Manage Jenkins ---> Plugins ---> Available Plugins ---> Search for 'SonarQube Scanner' and select it. Also search for 'Eclipse Temurin installer' and 'Pipeline Stage View" and select them ---> Install ---> Click on 'Go back to the top of page'
+Jenkins Dashboard ---> Manage Jenkins ---> Plugins ---> Available Plugins ---> Search for 'SonarQube Scanner' and select it. Also search for 'Eclipse Temurin installer' and 'Pipeline Stage View"a and docker"select all" and select them ---> Install ---> Click on 'Go back to the top of page'
 
 Jenkins Dashboard ---> Manage Jenkins ---> Tools ---> Add JDK ---> Name: jdk17, 'Check' install automatically, Select 'Install from adoptium.net' from dropdown, Version: select jdk-17.0.11+9 ---> Click on 'Add SonarQube Scanner', Name: sonar-scanner, 'Check' install automatically, Select 'Install from Maven Central', Version: SonarQube Scanner 5.0.1.3006 ---> Click on 'Add Maven' ---> Name:  maven3,  'Check' install automatically, Select 'Install from Apache' from dropdown, Version: 3.9.7 ---> Apply ---> Save
 
@@ -100,6 +100,7 @@ Manage Jenkins --- Security --- Credentials --- Click on 'global' --- Click on '
 Similarly configure dockerhub credentials with id as "dockerhub-credentials" with kind as "username with password"
 
 Manage Jenkins --- System --- Scroll down to 'SonarQube servers' --- Click on 'Add SonarQube' --- Name: sonar-server --- ServerURL: <PublicIPofSQinstalledVM>:9000 --- Server Authentication Token: select 'sonar-token' --- Apply --- Save
+
 
 
 
